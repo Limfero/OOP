@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multmatrix", "multmatrix.csproj", "{93176B1B-BA73-4AE7-8D35-292BFB7E7C81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multmatrix_test", "..\multmatrix_test\multmatrix_test.csproj", "{C4E2E0EC-F8E1-41CD-93DC-9D3540C6748E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93176B1B-BA73-4AE7-8D35-292BFB7E7C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93176B1B-BA73-4AE7-8D35-292BFB7E7C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93176B1B-BA73-4AE7-8D35-292BFB7E7C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93176B1B-BA73-4AE7-8D35-292BFB7E7C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E2E0EC-F8E1-41CD-93DC-9D3540C6748E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E2E0EC-F8E1-41CD-93DC-9D3540C6748E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E2E0EC-F8E1-41CD-93DC-9D3540C6748E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E2E0EC-F8E1-41CD-93DC-9D3540C6748E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE8FBEA8-65DF-4BF9-BBE5-43D19E884000}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+A number outside the range 0-255
