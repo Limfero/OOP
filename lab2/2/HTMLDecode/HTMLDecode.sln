@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLDecode", "HTMLDecode.csproj", "{81B5D8C0-5A89-464A-B9F8-2295BB45BD17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLDecode_test", "..\HTMLDecode_test\HTMLDecode_test.csproj", "{DC004DE9-6139-41BC-A87D-F49B22B6C8BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81B5D8C0-5A89-464A-B9F8-2295BB45BD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B5D8C0-5A89-464A-B9F8-2295BB45BD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B5D8C0-5A89-464A-B9F8-2295BB45BD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B5D8C0-5A89-464A-B9F8-2295BB45BD17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC004DE9-6139-41BC-A87D-F49B22B6C8BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC004DE9-6139-41BC-A87D-F49B22B6C8BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC004DE9-6139-41BC-A87D-F49B22B6C8BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC004DE9-6139-41BC-A87D-F49B22B6C8BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A460991F-472E-40BF-8FD8-AE9BC26948B3}
+	EndGlobalSection
+EndGlobal
