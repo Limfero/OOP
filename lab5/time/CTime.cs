@@ -2,21 +2,29 @@
 {
     public class CTime
     {
-        public int Hours { get { return _totalSeconds / 3600; } }
-        public int Minutes { get { return _totalSeconds % 3600 / 60; } }
-        public int Seconds { get { return _totalSeconds % 60; } }
+        public int Hours { get { return _totalSeconds / _multiplierСonvertFromTotalSecondsToHours; } }
+        public int Minutes { get { return _totalSeconds % _multiplierConvertFromTotalSecondsToMinutes; } }
+        public int Seconds { get { return _totalSeconds % _multiplierConvertFromTotalSecondToSeconds; } }
 
         private int _totalSeconds;
+
+        private static readonly int _multiplierСonvertFromTotalSecondsToHours = 3600;
+        private static readonly int _multiplierConvertFromTotalSecondsToMinutes = _multiplierСonvertFromTotalSecondsToHours / 60;
+        private static readonly int _multiplierConvertFromTotalSecondToSeconds = 60;
+        private static readonly int _hoursInDay = 24;
+        private static readonly int _minutesInHour = 60;
+        private static readonly int _secondsInMinute = 60;
+        private static readonly int _secondsInHour = 3600;
 
         private static readonly string Invalid = "INVALID";
         private static readonly string TimeFormat = "{0:D2}:{1:D2}:{2:D2}";
 
         public CTime(int hours, int minutes, int seconds)
         {
-            if (hours > 23 || minutes > 59 || seconds > 59)
+            if (hours > _hoursInDay - 1 || minutes > _minutesInHour - 1 || seconds > _secondsInMinute - 1)
                 throw new ArgumentException(Invalid);
 
-            _totalSeconds = hours * 3600 + minutes * 60 + seconds;
+            _totalSeconds = hours * _secondsInHour + minutes * _secondsInMinute + seconds;
         }
 
         public CTime(int timeStamp) => _totalSeconds = timeStamp;
@@ -24,7 +32,7 @@
         public static CTime operator ++(CTime time)
         {
             time._totalSeconds++;
-            if (time._totalSeconds >= 24 * 3600)
+            if (time._totalSeconds >= _hoursInDay * _secondsInHour)
                 time._totalSeconds = 0;
             return time;
         }
@@ -33,15 +41,15 @@
         {
             time._totalSeconds--;
             if (time._totalSeconds < 0)
-                time._totalSeconds = 24 * 3600 - 1;
+                time._totalSeconds = _hoursInDay * _secondsInHour - 1;
             return time;
         }
 
         public static CTime operator +(CTime time1, CTime time2)
         {
             int totalSeconds = time1._totalSeconds + time2._totalSeconds;
-            if (totalSeconds >= 24 * 3600)
-                totalSeconds -= 24 * 3600;
+            if (totalSeconds >= _hoursInDay * _secondsInHour)
+                totalSeconds -= _hoursInDay * _secondsInHour;
             return new CTime(totalSeconds);
         }
 
@@ -49,15 +57,15 @@
         {
             int totalSeconds = time1._totalSeconds - time2._totalSeconds;
             if (totalSeconds < 0)
-                totalSeconds += 24 * 3600;
+                totalSeconds += _hoursInDay * _secondsInHour;
             return new CTime(totalSeconds);
         }
 
         public static CTime operator *(CTime time, int multiplier)
         {
             int totalSeconds = time._totalSeconds * multiplier;
-            if (totalSeconds >= 24 * 3600)
-                totalSeconds %= 24 * 3600;
+            if (totalSeconds >= _hoursInDay * _secondsInHour)
+                totalSeconds %= _hoursInDay * _secondsInHour;
             return new CTime(totalSeconds);
         }
 
